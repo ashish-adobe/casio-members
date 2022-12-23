@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © CO-WELL ASIA CO.,LTD.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">My Page Home</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Casio\CasioMembers\Block\Customer\CasioMembers" name="casio_members_product_block"
+                   template="Casio_CasioMembers::customer/casio_members.phtml" after="-">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="casiomembers" xsi:type="array">
+                                <item name="component" xsi:type="string">Casio_CasioMembers/js/view/casio_members</item>
+                                <item name="displayArea" xsi:type="string">casiomembers</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

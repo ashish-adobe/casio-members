@@ -1,0 +1,22 @@
+{
+  "name": "casio/members",
+  "version": "1.0.0",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "casio/authentication-casio-id": "1.0.*",
+    "psr/log": "^1.0"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Casio\\Members\\": ""
+    }
+  }
+}

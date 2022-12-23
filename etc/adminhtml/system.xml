@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © CO-WELL ASIA CO.,LTD.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="my_account" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+            <class>separator-top</class>
+            <label>My Account</label>
+            <tab>casio</tab>
+            <resource>Casio_CasioMembers::config</resource>
+            <group id="casio_members" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Casio Member</label>
+                <field id="enable_new_product_registration" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enable New Product Registration</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="base_url" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Base Url</label>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>API Url</label>
+                </field>
+                <field id="integration_url" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Data Integration URL</label>
+                </field>
+                <field id="integration_support_url" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Data Integration Support URL</label>
+                </field>
+                <field id="product_registration_url" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Product Registration URL</label>
+                </field>
+                <field id="proxy" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Proxy</label>
+                    <comment>Enter host and port of the proxy: Example : 127.0.0.1:3128</comment>
+                </field>
+                <field id="paging_number" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Paging Number</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,58 @@
+<h2 data-bind="text: productRegistration()"></h2>
+<!-- ko if: isEnableNewProductRegistration -->
+<div class="btns">
+    <a data-bind="text: $t('New Product Registration'), attr: { href: '#'}, afterRender: scrollToIsRegistration" id="is-registration" class="is-registration"></a>
+</div>
+<!-- /ko -->
+<!-- ko if: productList().length -->
+<dl id="filter-product">
+    <dt data-bind="text: $t('Sort:')"></dt>
+    <dd>
+        <select class="is-sort" data-bind="
+            options: filterOptions,
+            optionsText: 'label',
+            optionsValue: 'value',
+            selectedOptions: chosenFilter,
+            event: { change: changeFilterOrder },
+            attr: {'id': 'filter-product-option', 'name': 'filter-product-option'}">
+        </select>
+    </dd>
+</dl>
+<div class="casio-members-product-list" data-bind="blockLoader: isLoading">
+    <div class="product-list" data-bind="foreach: productList">
+        <div class="data-item">
+            <div class="data-item-inr data-item-2col">
+                <div class="data-item-img">
+                    <img data-bind="attr: {src: image_s_url, height: 150, width: 150}" alt="Product Image">
+                </div>
+                <div class="data-item-txt">
+                    <dl>
+                        <dt data-bind="text: $t('Product name:')"></dt>
+                        <dd data-bind="text: model_name"></dd>
+                    </dl>
+                    <dl>
+                        <dt data-bind="text: $t('Purchase date:')"></dt>
+                        <dd data-bind="text: purchase_date"></dd>
+                    </dl>
+                    <dl>
+                        <dt data-bind="text: $t('Serial number:')"></dt>
+                        <dd data-bind="text: serial"></dd>
+                    </dl>
+                    <ul class="links">
+                        <li><a target="_blank" data-bind="attr: { href: manual_url }">Instructions</a></li>
+                        <li><a target="_blank" data-bind="attr: { href: battery_url }">Battery replacement request</a></li>
+                        <li><a target="_blank" data-bind="attr: { href: repair_url }">Repair request</a></li>
+                    </ul>
+                    <div class="data-item-btns">
+                        <a target="_blank" data-bind="attr: { href: alter_url }"><button class="is-edit" data-bind="text: $t('Edit')"></button></a>
+                        <a target="_blank" data-bind="attr: { href: alter_url }"><button class="is-delete" data-bind="text: $t('Delete')"></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ko if: isEnableShowMoreProductButton -->
+    <button data-bind="click: getProduct, afterRender: scrollToIsRegistration">Show More Product</button>
+    <!-- /ko -->
+    <!-- /ko -->
+</div>

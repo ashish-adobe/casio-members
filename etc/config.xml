@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © CO-WELL ASIA CO.,LTD.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <my_account>
+            <casio_members>
+                <enable_new_product_registration>0</enable_new_product_registration>
+                <api_url></api_url>
+                <integration_url>/jp/products_reg/g007.php</integration_url>
+                <integration_support_url>/jp/products_reg</integration_support_url>
+                <product_registration_url>/jp/products_reg/g007.php</product_registration_url>
+                <paging_number>5</paging_number>
+            </casio_members>
+        </my_account>
+    </default>
+</config>
